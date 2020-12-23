@@ -4,25 +4,12 @@ import ActivitySelector from '../components/ActivitySelector';
 
 function ActivityContainer() {
     const [randomActivity, setRandomActivity] = useState('');
-    // const [selectedActivityType, setSelectedActivityType] = useState('');
-
-    // const getSelectedActivityType = activity => {
-    //     setSelectedActivityType(activity)
-    // }
-
-    // const getActivityUrl = selectedActivityType => {
-    //     let activityUrl = null;
-    //     (selectedActivityType === "free") ? activityUrl = "http://www.boredapi.com/api/activity?price=0.0": activityUrl = `http://www.boredapi.com/api/activity?type=${selectedActivityType}`
-    //     return activityUrl;
-    // }
 
     const handleActivityTypeSelection = activity => {
-        // setSelectedActivityType(activity);
 
         let activityUrl = null;
-        (activity === "free") ? activityUrl = "http://www.boredapi.com/api/activity?price=0.0": activityUrl = `http://www.boredapi.com/api/activity?type=${activity}`
+        (activity === "free") ? activityUrl = "http://www.boredapi.com/api/activity?price=0.0&participants=1": activityUrl = `http://www.boredapi.com/api/activity?type=${activity}&participants=1`
 
-        console.log(activityUrl);
         getRandomActivity(activityUrl);
 
     }
@@ -41,9 +28,6 @@ function ActivityContainer() {
         getRandomActivity("http://www.boredapi.com/api/activity?participants=1")
     }, []);
 
-    // useEffect(() => {
-    //     handleActivityTypeSelection(selectedActivityType);
-    // }, [selectedActivityType])
 
     return (
       <>
