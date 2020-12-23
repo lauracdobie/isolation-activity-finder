@@ -1,6 +1,10 @@
-function Activity() {
+function Activity({randomActivity}) {
+    if (!randomActivity) return null;
+    let activityName = randomActivity.activity.toLowerCase();
     return (
-        <h2>I'm an activity</h2>
+        <>
+            <p>Why not {activityName}? </p>
+        </>
     );
 }
 
