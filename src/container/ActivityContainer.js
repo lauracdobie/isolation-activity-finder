@@ -31,10 +31,11 @@ function ActivityContainer() {
 
     return (
       <>
-        <h1>Self isolating? Need something hermit-friendly to fill the hours?</h1>
+        <section className="self-isolating">
+          <h2 id="question">Self isolating?</h2>
+            <ActivitySelector handleActivityTypeSelection={handleActivityTypeSelection}/> 
+        </section>
         <Activity randomActivity={randomActivity} />
-        <h2>Not your thing? Get another suggestion!</h2>
-        <ActivitySelector handleActivityTypeSelection={handleActivityTypeSelection}/>
       </>
     );
   }

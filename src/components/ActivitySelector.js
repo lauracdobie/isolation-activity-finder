@@ -1,11 +1,13 @@
 function ActivitySelector({handleActivityTypeSelection}) {
+    let selectedCategory = null;
     const handleChange = event => {
-        handleActivityTypeSelection(event.target.value);
+        selectedCategory = event.target.value;
+        handleActivityTypeSelection(selectedCategory);
     }
 
     return (
-        <>
-            <p>Find me something that's...</p> 
+        <div className="activity-selector">
+            <h2>Need something</h2>
             <select defaultValue="" onChange={handleChange}>
                 <option value="" disabled>Activity type</option>
                 <option value="social">sociable</option>
@@ -16,9 +18,9 @@ function ActivitySelector({handleActivityTypeSelection}) {
                 <option value="music">musical</option>                
                 <option value="busywork">industrious</option>                
                 <option value="free">free!</option>                
-
             </select>
-        </>
+            <h2>to fill the hours?</h2>
+        </div>
     );
 }
 

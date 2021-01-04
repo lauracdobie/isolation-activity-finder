@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Noto+Serif:ital@0;1&display=swap');
+
+body {
+  font-family: 'Noto Serif', serif;
+  color: #2D1B3D;
+  background-image: url("background_pattern.png");
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.self-isolating {
+  margin-top: 87px;
+  margin-left: 214px;
+  border-left: solid 2px #2D1B3D;
+  margin-bottom: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.activity-selector {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 40px;
+  line-height: 1.4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
 }
+
+p {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  color: #8561A3;
+  line-height: 1.5;
+  padding-bottom: 16px;
+}
+
+#question, h1 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+#question {
+  line-height: 1;
+  padding-bottom: 16px;
+}
+
+select {
+  width: 231px;
+  border-radius: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+}
+
+button {
+  width: 231px;
+  border-radius: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #fff;
+}
+
+.activity-suggestion {
+  background-color: #fff;
+  width: 648px;
+  height: 312px;
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-left: 50px;
+  margin-left: 244px;
+}
+
+
